@@ -1245,7 +1245,151 @@
 		},
 		{
 			"name": "Orchestrator",
-			"item": [],
+			"item": [
+				{
+					"name": "Attempt",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"pm.environment.set(\"ORCHESTRATOR_ATTEMP_SESSIONID\", jsonData.SessionId);"
+								],
+								"type": "text/javascript",
+								"id": "8d3ac3c0-21e0-43b9-8453-e5de5f1afa31"
+							}
+						}
+					],
+					"id": "27354648-a2a42da6-25da-4b4d-8eaf-d07d22eacee7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "DbLocal",
+									"value": "{{ID_BD_PR2023}}",
+									"type": "text"
+								},
+								{
+									"key": "DbConnectionIdRemota",
+									"value": "007B07C2-0693-4A2E-8F75-0FD27FAA859A",
+									"type": "text"
+								},
+								{
+									"key": "Version",
+									"value": "99.9999.99999",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/Orchestrator/Attempt?actionType=ReplicaSubida&resourceId={{ID_BD_PR2023}}&memberId=PostmanPruiz404822",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Orchestrator",
+								"Attempt"
+							],
+							"query": [
+								{
+									"key": "actionType",
+									"value": "ReplicaSubida"
+								},
+								{
+									"key": "resourceId",
+									"value": "{{ID_BD_PR2023}}"
+								},
+								{
+									"key": "memberId",
+									"value": "PostmanPruiz404822"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Finish",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6bf65a9b-5996-4a38-91e6-50fcc0714d7e",
+								"exec": [
+									"console.log(pm.info.requestId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "27354648-7b494767-ec2f-4a80-bd7d-bc5a2b92453e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "DbLocal",
+									"value": "{{ID_BD_PR2023}}",
+									"type": "text"
+								},
+								{
+									"key": "DbConnectionIdRemota",
+									"value": "5A743E13-1FDF-4B89-846B-3BDBE4964299",
+									"type": "text"
+								},
+								{
+									"key": "Version",
+									"value": "99.9999.99999",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/Orchestrator/Finish?actionType=ReplicaSubida&sessionId={{ORCHESTRATOR_ATTEMP_SESSIONID}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Orchestrator",
+								"Finish"
+							],
+							"query": [
+								{
+									"key": "actionType",
+									"value": "ReplicaSubida"
+								},
+								{
+									"key": "sessionId",
+									"value": "{{ORCHESTRATOR_ATTEMP_SESSIONID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
 			"id": "27354648-926b0429-67c3-4e54-9df3-ce80b74e92ce"
 		},
 		{
@@ -1564,6 +1708,11 @@
 				}
 			],
 			"id": "27354648-fb15afd6-3234-40be-b1e4-ef08a033a16e"
+		},
+		{
+			"name": "New Folder",
+			"item": [],
+			"id": "27354648-a7c8035c-33de-4605-aed0-df844d84a11e"
 		}
 	]
 }
