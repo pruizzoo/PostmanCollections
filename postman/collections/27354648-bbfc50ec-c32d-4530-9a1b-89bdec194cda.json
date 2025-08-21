@@ -500,8 +500,182 @@
 			"id": "27354648-a581788a-f339-4a02-a49c-66fe08dae030"
 		},
 		{
-			"name": "New Folder",
-			"item": [],
+			"name": "Email",
+			"item": [
+				{
+					"name": "SendEmailConflictServiceAssignedReplica",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2a30a030-4b15-427a-a5ec-8fc9fbef18d4",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "27354648-ec50caf9-5a81-4b08-bc71-a827e8edfb59",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/EMail/SendEmailConflictServiceAssignedReplica?lastExecution=2023-01-01T14:16:37.00",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"EMail",
+								"SendEmailConflictServiceAssignedReplica"
+							],
+							"query": [
+								{
+									"key": "lastExecution",
+									"value": "2023-01-01T14:16:37.00",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCompanysWithoutReplicaBajada",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2a30a030-4b15-427a-a5ec-8fc9fbef18d4",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "27354648-035d8b08-2fb4-473f-af74-9e5c494e3304",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Email/GetCompanysWithoutReplicaBajada",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Email",
+								"GetCompanysWithoutReplicaBajada"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCompanysWithoutReplicaBajada",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2a30a030-4b15-427a-a5ec-8fc9fbef18d4",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "27354648-37d536a3-2ba8-4af1-8ece-7818344774f6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/EMail/GetCompanysWithoutReplicaBajada",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"EMail",
+								"GetCompanysWithoutReplicaBajada"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetInactiveUsers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2a30a030-4b15-427a-a5ec-8fc9fbef18d4",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "27354648-0b242f1d-8712-4318-b73f-47f7417bf613",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Email/{{MICOMPANY}}/GetInactiveUsers",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Email",
+								"{{MICOMPANY}}",
+								"GetInactiveUsers"
+							]
+						}
+					},
+					"response": []
+				}
+			],
 			"id": "27354648-e3355191-9ef1-44c3-acb1-f9d4288f3d79"
 		}
 	]
