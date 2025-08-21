@@ -1506,6 +1506,103 @@
 			"id": "27354648-b1b66b20-77dc-4a7e-82fd-2f0a1a01a5e8"
 		},
 		{
+			"name": "Publication",
+			"item": [
+				{
+					"name": "PublishNotSentMessages",
+					"id": "27354648-04e21454-45da-4e98-af51-491c68ddd78f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "3AA84DCA-06A1-4193-A19D-A19A1022E08G",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Publication/f18ce86b-6e0f-4534-ab58-ec49befe8afd/PublishNotSentMessages",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Publication",
+								"f18ce86b-6e0f-4534-ab58-ec49befe8afd",
+								"PublishNotSentMessages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPublication",
+					"id": "27354648-3250e545-7144-4934-a058-180898c179a9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-token",
+								"value": "b487fe52-2095-469b-90d3-91f324a55a84",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Publicationv2/GetPublication?publicationId=b30ea2a2-a455-4588-b1d3-e9ed2199553f",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Publicationv2",
+								"GetPublication"
+							],
+							"query": [
+								{
+									"key": "publicationId",
+									"value": "b30ea2a2-a455-4588-b1d3-e9ed2199553f"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-c19e2ee5-915c-44ba-9d34-f1749f47549a"
+		},
+		{
 			"name": "Settings",
 			"item": [
 				{
@@ -1907,11 +2004,6 @@
 				}
 			],
 			"id": "27354648-fb15afd6-3234-40be-b1e4-ef08a033a16e"
-		},
-		{
-			"name": "Publication",
-			"item": [],
-			"id": "27354648-c19e2ee5-915c-44ba-9d34-f1749f47549a"
 		}
 	]
 }
