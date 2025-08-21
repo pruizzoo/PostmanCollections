@@ -1598,9 +1598,144 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "GetCentralizationInfoByDBId",
+					"id": "27354648-4329987f-89d0-4b61-aab3-f29d26258b00",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-token",
+								"value": "b487fe52-2095-469b-90d3-91f324a55a84",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Publicationv2/GetPublication?publicationId=b30ea2a2-a455-4588-b1d3-e9ed2199553f",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Publicationv2",
+								"GetPublication"
+							],
+							"query": [
+								{
+									"key": "publicationId",
+									"value": "b30ea2a2-a455-4588-b1d3-e9ed2199553f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCompaniesWithNotSentMessages",
+					"id": "27354648-f9eb2a76-670f-49fe-9a59-5327b25e4e7f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-token",
+								"value": "b487fe52-2095-469b-90d3-91f324a55a84",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Publicationv2/GetPublication?publicationId=b30ea2a2-a455-4588-b1d3-e9ed2199553f",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Publicationv2",
+								"GetPublication"
+							],
+							"query": [
+								{
+									"key": "publicationId",
+									"value": "b30ea2a2-a455-4588-b1d3-e9ed2199553f"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "27354648-c19e2ee5-915c-44ba-9d34-f1749f47549a"
+		},
+		{
+			"name": "ServiceBus",
+			"item": [
+				{
+					"name": "Fetch",
+					"id": "27354648-ab46f4b2-7c2b-4aba-94d0-9abb9808a05b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "5668da89-3265-4412-be3f-291349f74d4d",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"AppType\": { \"Name\": \"DRAGONFISH\" },\r\n    \"Credentials\": [\r\n        { \"Key\": \"Serie\", \"Value\": { \"Value\": \"704110\" } },\r\n        { \"Key\": \"Site\", \"Value\": { \"Value\": \"648e63c5-345a-4fe2-b426-767075ee66b6\" } }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44381/IdentitySubscriptions/Fetch",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44381",
+							"path": [
+								"IdentitySubscriptions",
+								"Fetch"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-ccf46831-543e-48c5-9e46-4f38ea3b453a"
 		},
 		{
 			"name": "Settings",
@@ -2004,6 +2139,11 @@
 				}
 			],
 			"id": "27354648-fb15afd6-3234-40be-b1e4-ef08a033a16e"
+		},
+		{
+			"name": "New Folder",
+			"item": [],
+			"id": "27354648-86cc0479-10b2-4da1-b466-10ab2c7f9e26"
 		}
 	]
 }
