@@ -1168,6 +1168,77 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "PublishStock",
+					"id": "27354648-f6a6d629-cf79-4b3e-ae57-8c13fd7b858d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ProductId\": \"REM016\",\r\n    \"Sku\": \"REM016##S\",\r\n    \"Payload\": \r\n        {\r\n            \"Talle\": \"S\"},\r\n            \"Quantity\": 1,0,\r\n            \"Timestamp\":\"2019-07-21\"\r\n        }\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{URL}}//Omnichannel/PublishStock",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"",
+								"Omnichannel",
+								"PublishStock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetStock",
+					"id": "27354648-7d27f707-10b8-4d34-ae26-e12eac050d4a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "4334b00c-c17c-4938-8b5a-0f3face419f8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Omnichannel/GetStock?resources=182272c5-fc7e-4c68-b98f-9d9ec472a122&limit=100",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Omnichannel",
+								"GetStock"
+							],
+							"query": [
+								{
+									"key": "resources",
+									"value": "182272c5-fc7e-4c68-b98f-9d9ec472a122"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "27354648-e911e3f4-9490-487f-97d0-0ec4e432fb86"
