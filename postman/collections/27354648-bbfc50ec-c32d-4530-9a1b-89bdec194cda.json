@@ -1747,6 +1747,85 @@
 				}
 			],
 			"id": "27354648-a7c8035c-33de-4605-aed0-df844d84a11e"
+		},
+		{
+			"name": "Provisioning_RestrictedUse",
+			"item": [
+				{
+					"name": "ProcessPendingDbConnections",
+					"id": "27354648-acdc89b9-d506-4cea-bd05-65ce2f292afa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Provisioning_RestrictedUse/{{WORKER_COMPANYID}}/ProcessPendingDbConnections",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Provisioning_RestrictedUse",
+								"{{WORKER_COMPANYID}}",
+								"ProcessPendingDbConnections"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PurgeDbConnections",
+					"id": "27354648-53024064-b6cf-4cd6-b807-17dd6c9e62e8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Provisioning_RestrictedUse/{{WORKER_COMPANYID}}/ProcessPendingDbConnections",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Provisioning_RestrictedUse",
+								"{{WORKER_COMPANYID}}",
+								"ProcessPendingDbConnections"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-b1b66b20-77dc-4a7e-82fd-2f0a1a01a5e8"
+		},
+		{
+			"name": "Settings",
+			"item": [],
+			"id": "27354648-96cbbef9-8571-481c-9af5-ea210615ee9b"
 		}
 	]
 }
