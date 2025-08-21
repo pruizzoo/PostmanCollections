@@ -1062,6 +1062,203 @@
 			"id": "27354648-dfe9fce4-cc7e-4cf4-9831-e5a603ef0d45"
 		},
 		{
+			"name": "OLAP",
+			"item": [
+				{
+					"name": "GetAttachment",
+					"id": "27354648-ced056ba-2bdd-4a46-bf93-e4dce8293a0e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Slot/GetAttachment?name=cuboVentasPorArticulo&filters=FromTo%3b0%3b22%2f02%2f2024 12%3A00%3A00 a.m.%3b31%2f12%2f2023 12%3A00%3A00 a.m.&companyId=7532fa25-bd4d-49c8-a978-471311b700c6&userId=9904f9ca-0750-4cf6-8a66-1be102196e4d&idReport=e04eb1b1-3cc0-4fdd-98d9-6abff87c0f31&fileFormat=XLS&sendEmpty=False&idReportSession=a5dfe26c-4c1f-4ee1-8869-35a7818854a7&expandType=all",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Slot",
+								"GetAttachment"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "cuboVentasPorArticulo",
+									"type": "text"
+								},
+								{
+									"key": "filters",
+									"value": "FromTo%3b0%3b22%2f02%2f2024 12%3A00%3A00 a.m.%3b31%2f12%2f2023 12%3A00%3A00 a.m.",
+									"type": "text"
+								},
+								{
+									"key": "companyId",
+									"value": "7532fa25-bd4d-49c8-a978-471311b700c6",
+									"type": "text"
+								},
+								{
+									"key": "userId",
+									"value": "9904f9ca-0750-4cf6-8a66-1be102196e4d",
+									"type": "text"
+								},
+								{
+									"key": "idReport",
+									"value": "e04eb1b1-3cc0-4fdd-98d9-6abff87c0f31",
+									"type": "text"
+								},
+								{
+									"key": "fileFormat",
+									"value": "XLS",
+									"type": "text"
+								},
+								{
+									"key": "sendEmpty",
+									"value": "False",
+									"type": "text"
+								},
+								{
+									"key": "idReportSession",
+									"value": "a5dfe26c-4c1f-4ee1-8869-35a7818854a7",
+									"type": "text"
+								},
+								{
+									"key": "expandType",
+									"value": "all",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-c25a40dd-1007-47fe-8675-f3a9ef90aec7"
+		},
+		{
+			"name": "Omnicanalidad",
+			"item": [
+				{
+					"name": "Stats - Put (Prod)",
+					"id": "27354648-f36820d3-b3e4-4c1c-a284-a2cc8b49be0f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Serie\": \"404822\",\r\n  \"Producto\": \"DRAGONFISH\",\r\n  \"Sitio\": {\r\n    \"Id\": \"9CAEB158-BBCB-49DE-AFB0-381449457AE9\",\r\n    \"Nombre\": \"sitio_pr\"\r\n  },\r\n  \"Bases\": [\r\n    {\r\n      \"Id\": \"7D61E6FD-92BF-461C-A1AF-77B5C568F0FA\",\r\n      \"NombreBase\": \"DEMO\"\r\n    },\r\n    {\r\n      \"Id\": \"182272C5-FC7E-4C68-B98F-9D9EC472A122\",\r\n      \"NombreBase\": \"PR2023\"\r\n    },\r\n    {\r\n      \"Id\": \"E6B8014D-3A86-42F3-BCE7-1E777A16D192\",\r\n      \"NombreBase\": \"OTRABD\"\r\n    },\r\n    {\r\n      \"Id\": \"0B84CCE7-B620-434E-991E-D0AFC5359DF2\",\r\n      \"NombreBase\": \"NUEVADB\"\r\n    }\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-e911e3f4-9490-487f-97d0-0ec4e432fb86"
+		},
+		{
+			"name": "Settings_RestrictedUse",
+			"item": [
+				{
+					"name": "RemoveDbLocalFromGroups",
+					"id": "27354648-7ebcaba3-6fc1-46f0-afa9-0e009a0a2591",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Settings_RestrictedUse/{{MICOMPANY}}/RemoveDbLocalFromGroups?dbLocalId=28ae32f9-dbc8-49dc-8f40-8672907c51c0",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Settings_RestrictedUse",
+								"{{MICOMPANY}}",
+								"RemoveDbLocalFromGroups"
+							],
+							"query": [
+								{
+									"key": "dbLocalId",
+									"value": "28ae32f9-dbc8-49dc-8f40-8672907c51c0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SendServicesConflictEmailForReplica",
+					"id": "27354648-13129623-0c13-4844-904c-fbfa7f4c78d1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Settings_RestrictedUse/{{MICOMPANY}}/RemoveDbLocalFromGroups?dbLocalId=28ae32f9-dbc8-49dc-8f40-8672907c51c0",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Settings_RestrictedUse",
+								"{{MICOMPANY}}",
+								"RemoveDbLocalFromGroups"
+							],
+							"query": [
+								{
+									"key": "dbLocalId",
+									"value": "28ae32f9-dbc8-49dc-8f40-8672907c51c0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-ce264a54-2888-4c53-99e7-c031cbd15f2d"
+		},
+		{
 			"name": "Slot",
 			"item": [
 				{
