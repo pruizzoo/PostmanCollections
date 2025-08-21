@@ -1,0 +1,2331 @@
+{
+	"info": {
+		"_postman_id": "27354648-f413f09e-3609-49e1-bf64-209286370e73",
+		"name": "zNubeRest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Security",
+			"item": [
+				{
+					"name": "Authenticate_Worker",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "71e1ebe5-baf9-45ad-bc8a-2dd26a5019bd",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"pm.environment.set(\"TOKEN_WORKER\", jsonData);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "27354648-39e38f42-b0fd-4e6a-a374-8daa2fb50bf6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Security/Authenticate?username=znube@zoologic.com.ar&password=111111",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Security",
+								"Authenticate"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "znube@zoologic.com.ar"
+								},
+								{
+									"key": "password",
+									"value": "111111"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authenticate",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8033f673-49eb-4dea-bedc-53d955af0e55",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"pm.environment.set(\"TOKEN\", jsonData);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "27354648-6afff578-f4f6-461b-8e70-72c97a4c5559",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Security/Authenticate?password=Password&username={{MISERIE}}@znube.com.ar",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Security",
+								"Authenticate"
+							],
+							"query": [
+								{
+									"key": "password",
+									"value": "Password"
+								},
+								{
+									"key": "username",
+									"value": "{{MISERIE}}@znube.com.ar"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-8068ab8d-dabf-460a-8637-d0805ddab4d4"
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "RemoteLogon",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3e1832c0-78f1-418e-852b-fc53fe4c2657",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"pm.environment.set(\"TOKEN\", jsonData);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "27354648-26a9626f-3d91-497c-8e25-83d357fa87ed",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Security/Authenticate?password=Password&username={{MISERIE}}@znube.com.ar",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Security",
+								"Authenticate"
+							],
+							"query": [
+								{
+									"key": "password",
+									"value": "Password"
+								},
+								{
+									"key": "username",
+									"value": "{{MISERIE}}@znube.com.ar"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-d74cc7cb-1d0f-4178-946c-7c3834de4652"
+		},
+		{
+			"name": "ADN",
+			"item": [
+				{
+					"name": "GetAdnByTableName",
+					"id": "27354648-c151b421-6f6a-43f6-8a47-cefdf5aa6398",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Publication/{{MICOMPANY}}/PublishNotSentMessages",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Publication",
+								"{{MICOMPANY}}",
+								"PublishNotSentMessages"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-95526c79-dfe1-4efc-9e72-e4823f7fc6d7"
+		},
+		{
+			"name": "Docs",
+			"item": [
+				{
+					"name": "Swagger",
+					"id": "27354648-0ec4e9a1-3fc6-4cb1-be55-d1ec6898aa92",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Docs/Swagger",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Docs",
+								"Swagger"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-1891e5f1-f2bc-454e-ab5a-7b98d4b93604"
+		},
+		{
+			"name": "Ecommerce",
+			"item": [
+				{
+					"name": "Publish",
+					"id": "27354648-06a213e6-9b3c-481d-857e-29df495e1265",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "znube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/ECommerce/{{MICOMPANY}}/6591851/Publish?publishPictures=true&petitionId=0",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"ECommerce",
+								"{{MICOMPANY}}",
+								"6591851",
+								"Publish"
+							],
+							"query": [
+								{
+									"key": "publishPictures",
+									"value": "true"
+								},
+								{
+									"key": "petitionId",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HookEventBase",
+					"id": "27354648-749c3e82-9aac-4491-ae5a-715237dd7782",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "znube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/ECommerce/{{MICOMPANY}}/3958754/Publish?publishPictures=true&petitionId=0",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"ECommerce",
+								"{{MICOMPANY}}",
+								"3958754",
+								"Publish"
+							],
+							"query": [
+								{
+									"key": "publishPictures",
+									"value": "true"
+								},
+								{
+									"key": "petitionId",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetConfigInfoAsync",
+					"id": "27354648-986071e2-87e3-4626-b62b-b9d3cbddfbf8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/ECommerce/{{MICOMPANY}}/GetConfigInfoAsync?dbLocalId=c97ec882-52c2-4d7f-8284-e7b7f7914e81",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"ECommerce",
+								"{{MICOMPANY}}",
+								"GetConfigInfoAsync"
+							],
+							"query": [
+								{
+									"key": "dbLocalId",
+									"value": "c97ec882-52c2-4d7f-8284-e7b7f7914e81"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-875b5ba0-5050-490f-b324-675fbfd1c3d6"
+		},
+		{
+			"name": "EcommerceIntegration",
+			"item": [
+				{
+					"name": "GetOrders",
+					"id": "27354648-c3a985b7-0b04-4e1e-aff0-1a515d6ea040",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/ECommerceIntegration/GetOrders?storeId=280852910&eCommerceType=1&limit=10&offset=4&fromOrderId=850050",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"ECommerceIntegration",
+								"GetOrders"
+							],
+							"query": [
+								{
+									"key": "storeId",
+									"value": "280852910"
+								},
+								{
+									"key": "eCommerceType",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "4"
+								},
+								{
+									"key": "fromOrderId",
+									"value": "850050"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOrdersHistory",
+					"id": "27354648-1025de5a-94f6-488b-877d-2e7f07882875",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/ECommerceIntegration/GetOrdersHistory?storeId=280852910&eCommerceType=3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"ECommerceIntegration",
+								"GetOrdersHistory"
+							],
+							"query": [
+								{
+									"key": "storeId",
+									"value": "280852910"
+								},
+								{
+									"key": "eCommerceType",
+									"value": "3"
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "4",
+									"disabled": true
+								},
+								{
+									"key": "fromOrderId",
+									"value": "850050",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EventMpOrder",
+					"id": "27354648-e090c575-ba57-4e38-a607-dacf7746d78f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/ECommerceIntegration/EventMpOrder?storeId=280852910&eCommerceType=3&storeOrderdId=5",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"ECommerceIntegration",
+								"EventMpOrder"
+							],
+							"query": [
+								{
+									"key": "storeId",
+									"value": "280852910"
+								},
+								{
+									"key": "eCommerceType",
+									"value": "3"
+								},
+								{
+									"key": "storeOrderdId",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-2b692d26-3c04-49c6-83fe-d0434dd98969"
+		},
+		{
+			"name": "Email",
+			"item": [
+				{
+					"name": "SendEmailConflictServiceAssignedReplica",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "42c3a0e5-ad55-4ec7-97ca-204b7dde6c5e",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "27354648-d09a7cbf-ea2b-4dac-ab7c-f33638c886e5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/EMail/SendEmailConflictServiceAssignedReplica?lastExecution=2023-01-01T14:16:37.00",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"EMail",
+								"SendEmailConflictServiceAssignedReplica"
+							],
+							"query": [
+								{
+									"key": "lastExecution",
+									"value": "2023-01-01T14:16:37.00",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCompanysWithoutReplicaBajada",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6a8336cc-cf10-47c4-91a9-faa883cce2a2",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "27354648-33009f01-9edd-448b-b1b8-51b4feee2bea",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Email/GetCompanysWithoutReplicaBajada",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Email",
+								"GetCompanysWithoutReplicaBajada"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCompanysWithoutReplicaBajada",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "733e7c3c-7266-4a3c-9460-056dab4f6a1e",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "27354648-895adee4-91e3-44e0-841b-9fef1e6aeef4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/EMail/GetCompanysWithoutReplicaBajada",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"EMail",
+								"GetCompanysWithoutReplicaBajada"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetInactiveUsers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "951b5cb7-ad98-4146-a73f-a83ee3f8ced4",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "27354648-84135a25-8006-4ffc-ab91-6d3a5c40a5de",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Email/{{MICOMPANY}}/GetInactiveUsers",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Email",
+								"{{MICOMPANY}}",
+								"GetInactiveUsers"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-31d4f521-d16a-4ebd-b3e5-b05b395af133"
+		},
+		{
+			"name": "Log",
+			"item": [
+				{
+					"name": "LogAccion",
+					"id": "27354648-44aba020-c907-4010-a2ca-333d2ae2695e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "zNube-token",
+								"value": "27bb7a94-aaa5-46b9-9541-df16b539eea6",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Log/LogAccion?LogId=6BE9D0E4-AFF7-4955-8EC5-B055D58C7A80&Result=Prueba&LogType=Error",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Log",
+								"LogAccion"
+							],
+							"query": [
+								{
+									"key": "LogId",
+									"value": "6BE9D0E4-AFF7-4955-8EC5-B055D58C7A80"
+								},
+								{
+									"key": "Date",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "Result",
+									"value": "Prueba"
+								},
+								{
+									"key": "LogType",
+									"value": "Error"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MandatoActionLog",
+					"id": "27354648-7138d6f9-92ea-48f1-b752-bccd58158214",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "zNube-token",
+								"value": "27bb7a94-aaa5-46b9-9541-df16b539eea6",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Log/MandatoActionLog?LogData=<TimeRecall>240</TimeRecall>&ActionType=Prueba&ActionId={{$guid}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Log",
+								"MandatoActionLog"
+							],
+							"query": [
+								{
+									"key": "LogData",
+									"value": "<TimeRecall>240</TimeRecall>"
+								},
+								{
+									"key": "ActionType",
+									"value": "Prueba"
+								},
+								{
+									"key": "ActionId",
+									"value": "{{$guid}}",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-300b65a2-5146-4636-b44f-c1ef0bc01d4b"
+		},
+		{
+			"name": "LogSinSeguridad",
+			"item": [
+				{
+					"name": "LogResultadoTarea",
+					"id": "27354648-cba4d5d3-9df4-4c07-9cef-75dfb992151e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "zNube-token",
+								"value": "27bb7a94-aaa5-46b9-9541-df16b539eea6",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Log/LogAccion?LogId=6BE9D0E4-AFF7-4955-8EC5-B055D58C7A80&Result=Prueba&LogType=Error",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Log",
+								"LogAccion"
+							],
+							"query": [
+								{
+									"key": "LogId",
+									"value": "6BE9D0E4-AFF7-4955-8EC5-B055D58C7A80"
+								},
+								{
+									"key": "Date",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "Result",
+									"value": "Prueba"
+								},
+								{
+									"key": "LogType",
+									"value": "Error"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-9399bf59-70b5-461f-a482-57cd023a42ca"
+		},
+		{
+			"name": "Mandato",
+			"item": [
+				{
+					"name": "Obtener",
+					"id": "27354648-a2d550bc-5f4d-400d-8a27-da5f1aebbcb2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-token",
+								"value": "27bb7a94-aaa5-46b9-9541-df16b539eea6",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Mandato/Obtener?sitioId={{MISITIO}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Mandato",
+								"Obtener"
+							],
+							"query": [
+								{
+									"key": "sitioId",
+									"value": "{{MISITIO}}"
+								},
+								{
+									"key": "tipoDeMandato",
+									"value": "Basico",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "versionAAO",
+									"value": "23.4.3901.28",
+									"disabled": true
+								},
+								{
+									"key": "versionApp",
+									"value": "13.0004.13921",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-2ddb0872-b52b-40e3-899d-67b32331ead8"
+		},
+		{
+			"name": "Mobile",
+			"item": [
+				{
+					"name": "CreateSerial",
+					"id": "27354648-933dcf78-47b5-4a9a-b8ed-a40ee440c14b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ValidateApplication_ConsultaDeStockYPrecios",
+					"id": "27354648-4b4a615f-f588-4fbb-a353-868c600cc9fa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-3f0eb70b-8ebd-44d7-9928-84ad06412c8f"
+		},
+		{
+			"name": "Notify",
+			"item": [
+				{
+					"name": "PostEntities",
+					"id": "27354648-d18bd352-a480-46c5-9def-d9344b9369f9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "4334b00c-c17c-4938-8b5a-0f3face419f8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Name\": \"TIENEMINUSCULASS\",\r\n\t\"DbLocalId\": \"02b35a0e-1a06-4eda-9688-a1f9468f444d\",\r\n\t\"SiteId\": \"2746c08f-65b9-4f09-a36a-090fd5460af8\",\r\n\t\"Version\": \"2f13b9d8-37c2-4029-9846-058a657da4f7\",\r\n\t\"Entities\": [\r\n\t\t{\r\n\t\t\t\"Name\": \"TIENEMINUSCULASS\",\r\n\t\t\t\"OrganicId\": \"39527c24-e41f-4194-8f75-343f0eaa3b7f\",\r\n\t\t\t\"Data\": \"4aea00aa-1c10-4ceb-a071-88a46e6afed5\",\r\n\t\t\t\"DbLocalId\": \"02b35a0e-1a06-4eda-9688-a1f9468f444d\",\r\n\t\t\t\"SiteId\": \"2746c08f-65b9-4f09-a36a-090fd5460af8\",\r\n\t\t\t\"Deleted\": false,\r\n\t\t\t\"Version\": \"2f13b9d8-37c2-4029-9846-058a657da4f7\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Name\": \"TIENEMINUSCULASS\",\r\n\t\t\t\"OrganicId\": \"4bb0fa50-b3b0-4f46-8cf5-1424085619a7\",\r\n\t\t\t\"Data\": \"c8fef2ba-280e-4f47-95f5-7f986d8ae4b7\",\r\n\t\t\t\"DbLocalId\": \"02b35a0e-1a06-4eda-9688-a1f9468f444d\",\r\n\t\t\t\"SiteId\": \"2746c08f-65b9-4f09-a36a-090fd5460af8\",\r\n\t\t\t\"Deleted\": true,\r\n\t\t\t\"Version\": \"2f13b9d8-37c2-4029-9846-058a657da4f7\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Name\": \"TIENEMINUSCULASS\",\r\n\t\t\t\"OrganicId\": \"59d215f2-eea6-4c1e-8de5-3360dcdfa80e\",\r\n\t\t\t\"Data\": \"12592f85-feb6-45fb-bc0e-131b05e9dddd\",\r\n\t\t\t\"DbLocalId\": \"02b35a0e-1a06-4eda-9688-a1f9468f444d\",\r\n\t\t\t\"SiteId\": \"2746c08f-65b9-4f09-a36a-090fd5460af8\",\r\n\t\t\t\"Deleted\": false,\r\n\t\t\t\"Version\": \"2f13b9d8-37c2-4029-9846-058a657da4f7\"\r\n\t\t}\r\n\t],\r\n\t\"PublicationIds\": [\r\n\t\t\"f0810d9a-1245-4386-8db2-2e9a910e5dc1\",\r\n\t\t\"7d084df8-a019-41f6-8fa2-29c6a8051750\"\r\n\t],\r\n\t\"RestOriginType\": 2,\r\n\t\"RequestGroup\": null,\r\n\t\"Serie\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Notify/PostEntities?Name=&DbLocalId=100&SiteId&Version&Serie",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Notify",
+								"PostEntities"
+							],
+							"query": [
+								{
+									"key": "Name",
+									"value": ""
+								},
+								{
+									"key": "DbLocalId",
+									"value": "100"
+								},
+								{
+									"key": "SiteId",
+									"value": null,
+									"type": "text"
+								},
+								{
+									"key": "Version",
+									"value": null,
+									"type": "text"
+								},
+								{
+									"key": "Serie",
+									"value": null,
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostEntities Copy",
+					"id": "27354648-b726aea0-daff-46e8-8a87-74e76e9106dc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "4334b00c-c17c-4938-8b5a-0f3face419f8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Name\": \"TIENEMINUSCULASS\",\r\n\t\"DbLocalId\": \"02b35a0e-1a06-4eda-9688-a1f9468f444d\",\r\n\t\"SiteId\": \"2746c08f-65b9-4f09-a36a-090fd5460af8\",\r\n\t\"Version\": \"2f13b9d8-37c2-4029-9846-058a657da4f7\",\r\n\t\"Entities\": [\r\n\t\t{\r\n\t\t\t\"Name\": \"TIENEMINUSCULASS\",\r\n\t\t\t\"OrganicId\": \"39527c24-e41f-4194-8f75-343f0eaa3b7f\",\r\n\t\t\t\"Data\": \"4aea00aa-1c10-4ceb-a071-88a46e6afed5\",\r\n\t\t\t\"DbLocalId\": \"02b35a0e-1a06-4eda-9688-a1f9468f444d\",\r\n\t\t\t\"SiteId\": \"2746c08f-65b9-4f09-a36a-090fd5460af8\",\r\n\t\t\t\"Deleted\": false,\r\n\t\t\t\"Version\": \"2f13b9d8-37c2-4029-9846-058a657da4f7\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Name\": \"TIENEMINUSCULASS\",\r\n\t\t\t\"OrganicId\": \"4bb0fa50-b3b0-4f46-8cf5-1424085619a7\",\r\n\t\t\t\"Data\": \"c8fef2ba-280e-4f47-95f5-7f986d8ae4b7\",\r\n\t\t\t\"DbLocalId\": \"02b35a0e-1a06-4eda-9688-a1f9468f444d\",\r\n\t\t\t\"SiteId\": \"2746c08f-65b9-4f09-a36a-090fd5460af8\",\r\n\t\t\t\"Deleted\": true,\r\n\t\t\t\"Version\": \"2f13b9d8-37c2-4029-9846-058a657da4f7\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Name\": \"TIENEMINUSCULASS\",\r\n\t\t\t\"OrganicId\": \"59d215f2-eea6-4c1e-8de5-3360dcdfa80e\",\r\n\t\t\t\"Data\": \"12592f85-feb6-45fb-bc0e-131b05e9dddd\",\r\n\t\t\t\"DbLocalId\": \"02b35a0e-1a06-4eda-9688-a1f9468f444d\",\r\n\t\t\t\"SiteId\": \"2746c08f-65b9-4f09-a36a-090fd5460af8\",\r\n\t\t\t\"Deleted\": false,\r\n\t\t\t\"Version\": \"2f13b9d8-37c2-4029-9846-058a657da4f7\"\r\n\t\t}\r\n\t],\r\n\t\"PublicationIds\": [\r\n\t\t\"f0810d9a-1245-4386-8db2-2e9a910e5dc1\",\r\n\t\t\"7d084df8-a019-41f6-8fa2-29c6a8051750\"\r\n\t],\r\n\t\"RestOriginType\": 2,\r\n\t\"RequestGroup\": null,\r\n\t\"Serie\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Notify/PostEntities?Name=&DbLocalId=100&SiteId&Version&Serie",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Notify",
+								"PostEntities"
+							],
+							"query": [
+								{
+									"key": "Name",
+									"value": ""
+								},
+								{
+									"key": "DbLocalId",
+									"value": "100"
+								},
+								{
+									"key": "SiteId",
+									"value": null,
+									"type": "text"
+								},
+								{
+									"key": "Version",
+									"value": null,
+									"type": "text"
+								},
+								{
+									"key": "Serie",
+									"value": null,
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-c2fcacec-d241-44f4-9d0a-5cdbc8fcae62"
+		},
+		{
+			"name": "OLAP",
+			"item": [
+				{
+					"name": "GetAttachment",
+					"id": "27354648-d709bc31-b204-45eb-951a-dbdf4067a680",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Slot/GetAttachment?name=cuboVentasPorArticulo&filters=FromTo%3b0%3b22%2f02%2f2024 12%3A00%3A00 a.m.%3b31%2f12%2f2023 12%3A00%3A00 a.m.&companyId=7532fa25-bd4d-49c8-a978-471311b700c6&userId=9904f9ca-0750-4cf6-8a66-1be102196e4d&idReport=e04eb1b1-3cc0-4fdd-98d9-6abff87c0f31&fileFormat=XLS&sendEmpty=False&idReportSession=a5dfe26c-4c1f-4ee1-8869-35a7818854a7&expandType=all",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Slot",
+								"GetAttachment"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "cuboVentasPorArticulo",
+									"type": "text"
+								},
+								{
+									"key": "filters",
+									"value": "FromTo%3b0%3b22%2f02%2f2024 12%3A00%3A00 a.m.%3b31%2f12%2f2023 12%3A00%3A00 a.m.",
+									"type": "text"
+								},
+								{
+									"key": "companyId",
+									"value": "7532fa25-bd4d-49c8-a978-471311b700c6",
+									"type": "text"
+								},
+								{
+									"key": "userId",
+									"value": "9904f9ca-0750-4cf6-8a66-1be102196e4d",
+									"type": "text"
+								},
+								{
+									"key": "idReport",
+									"value": "e04eb1b1-3cc0-4fdd-98d9-6abff87c0f31",
+									"type": "text"
+								},
+								{
+									"key": "fileFormat",
+									"value": "XLS",
+									"type": "text"
+								},
+								{
+									"key": "sendEmpty",
+									"value": "False",
+									"type": "text"
+								},
+								{
+									"key": "idReportSession",
+									"value": "a5dfe26c-4c1f-4ee1-8869-35a7818854a7",
+									"type": "text"
+								},
+								{
+									"key": "expandType",
+									"value": "all",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-3692641f-7ac0-494f-b21a-bc6b6a107d88"
+		},
+		{
+			"name": "Omnicanalidad",
+			"item": [
+				{
+					"name": "Stats - Put (Prod)",
+					"id": "27354648-e846b538-4596-4974-8977-6aa236633029",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"Serie\": \"404822\",\r\n  \"Producto\": \"DRAGONFISH\",\r\n  \"Sitio\": {\r\n    \"Id\": \"9CAEB158-BBCB-49DE-AFB0-381449457AE9\",\r\n    \"Nombre\": \"sitio_pr\"\r\n  },\r\n  \"Bases\": [\r\n    {\r\n      \"Id\": \"7D61E6FD-92BF-461C-A1AF-77B5C568F0FA\",\r\n      \"NombreBase\": \"DEMO\"\r\n    },\r\n    {\r\n      \"Id\": \"182272C5-FC7E-4C68-B98F-9D9EC472A122\",\r\n      \"NombreBase\": \"PR2023\"\r\n    },\r\n    {\r\n      \"Id\": \"E6B8014D-3A86-42F3-BCE7-1E777A16D192\",\r\n      \"NombreBase\": \"OTRABD\"\r\n    },\r\n    {\r\n      \"Id\": \"0B84CCE7-B620-434E-991E-D0AFC5359DF2\",\r\n      \"NombreBase\": \"NUEVADB\"\r\n    }\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PublishStock",
+					"id": "27354648-d54261dc-c941-4982-96de-51917d6e410b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ProductId\": \"REM016\",\r\n    \"Sku\": \"REM016##S\",\r\n    \"Payload\": \r\n        {\r\n            \"Talle\": \"S\"},\r\n            \"Quantity\": 1,0,\r\n            \"Timestamp\":\"2019-07-21\"\r\n        }\r\n}\r\n"
+						},
+						"url": {
+							"raw": "{{URL}}/Omnichannel/PublishStock",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Omnichannel",
+								"PublishStock"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetStock",
+					"id": "27354648-f37a97e5-75f0-4853-801b-a3bd6169514c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "4334b00c-c17c-4938-8b5a-0f3face419f8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Omnichannel/GetStock?resources=182272c5-fc7e-4c68-b98f-9d9ec472a122&limit=100",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Omnichannel",
+								"GetStock"
+							],
+							"query": [
+								{
+									"key": "resources",
+									"value": "182272c5-fc7e-4c68-b98f-9d9ec472a122"
+								},
+								{
+									"key": "limit",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-3b391b28-2c95-4de7-aafd-e03c56e5f723"
+		},
+		{
+			"name": "Orchestrator",
+			"item": [
+				{
+					"name": "Attempt",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"pm.environment.set(\"ORCHESTRATOR_ATTEMP_SESSIONID\", jsonData.SessionId);"
+								],
+								"type": "text/javascript",
+								"id": "ee5b60d0-fc36-4d5a-b550-02c88ece5ffc"
+							}
+						}
+					],
+					"id": "27354648-9c9381f9-295a-4683-8818-6b8bb6331199",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "DbLocal",
+									"value": "{{ID_BD_PR2023}}",
+									"type": "text"
+								},
+								{
+									"key": "DbConnectionIdRemota",
+									"value": "007B07C2-0693-4A2E-8F75-0FD27FAA859A",
+									"type": "text"
+								},
+								{
+									"key": "Version",
+									"value": "99.9999.99999",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/Orchestrator/Attempt?actionType=ReplicaSubida&resourceId={{ID_BD_PR2023}}&memberId=PostmanPruiz404822",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Orchestrator",
+								"Attempt"
+							],
+							"query": [
+								{
+									"key": "actionType",
+									"value": "ReplicaSubida"
+								},
+								{
+									"key": "resourceId",
+									"value": "{{ID_BD_PR2023}}"
+								},
+								{
+									"key": "memberId",
+									"value": "PostmanPruiz404822"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Finish",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "27ece9d6-f2d7-4f8d-a934-3acf7816aa9a",
+								"exec": [
+									"console.log(pm.info.requestId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "27354648-78f9ad9c-b86d-4b63-82db-1715dc1897b3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "DbLocal",
+									"value": "{{ID_BD_PR2023}}",
+									"type": "text"
+								},
+								{
+									"key": "DbConnectionIdRemota",
+									"value": "5A743E13-1FDF-4B89-846B-3BDBE4964299",
+									"type": "text"
+								},
+								{
+									"key": "Version",
+									"value": "99.9999.99999",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}/Orchestrator/Finish?actionType=ReplicaSubida&sessionId={{ORCHESTRATOR_ATTEMP_SESSIONID}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Orchestrator",
+								"Finish"
+							],
+							"query": [
+								{
+									"key": "actionType",
+									"value": "ReplicaSubida"
+								},
+								{
+									"key": "sessionId",
+									"value": "{{ORCHESTRATOR_ATTEMP_SESSIONID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-c65e94d5-9f14-48ad-80c1-5bd5c121290d"
+		},
+		{
+			"name": "Provisioning",
+			"item": [
+				{
+					"name": "Purge",
+					"id": "27354648-01ae311a-e282-4418-90f4-5462c9d1b028",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Provisioning/Purge",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Provisioning",
+								"Purge"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-f03ad8ab-3c70-4963-be90-eb0d62239cbc"
+		},
+		{
+			"name": "Provisioning_RestrictedUse",
+			"item": [
+				{
+					"name": "ProcessPendingDbConnections",
+					"id": "27354648-2c39ba2e-dc03-4900-9fd1-007ed010204c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Provisioning_RestrictedUse/{{WORKER_COMPANYID}}/ProcessPendingDbConnections",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Provisioning_RestrictedUse",
+								"{{WORKER_COMPANYID}}",
+								"ProcessPendingDbConnections"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PurgeDbConnections",
+					"id": "27354648-6f05f70e-52c1-46bb-a383-79bdc4b71a16",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Provisioning_RestrictedUse/{{WORKER_COMPANYID}}/ProcessPendingDbConnections",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Provisioning_RestrictedUse",
+								"{{WORKER_COMPANYID}}",
+								"ProcessPendingDbConnections"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-0bf1a239-a3c0-484d-b5c6-92234321906b"
+		},
+		{
+			"name": "Publication",
+			"item": [
+				{
+					"name": "PublishNotSentMessages",
+					"id": "27354648-004f102c-a9af-4733-b1f9-1141f5e1c5a1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "3AA84DCA-06A1-4193-A19D-A19A1022E08G",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Publication/f18ce86b-6e0f-4534-ab58-ec49befe8afd/PublishNotSentMessages",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Publication",
+								"f18ce86b-6e0f-4534-ab58-ec49befe8afd",
+								"PublishNotSentMessages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetPublication",
+					"id": "27354648-8497b3cd-0a88-4a16-bd08-01256bb92172",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-token",
+								"value": "b487fe52-2095-469b-90d3-91f324a55a84",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Publicationv2/GetPublication?publicationId=b30ea2a2-a455-4588-b1d3-e9ed2199553f",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Publicationv2",
+								"GetPublication"
+							],
+							"query": [
+								{
+									"key": "publicationId",
+									"value": "b30ea2a2-a455-4588-b1d3-e9ed2199553f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCentralizationInfoByDBId",
+					"id": "27354648-994cd8a9-d4a3-4329-a54d-21dd05385f24",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-token",
+								"value": "b487fe52-2095-469b-90d3-91f324a55a84",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Publicationv2/GetPublication?publicationId=b30ea2a2-a455-4588-b1d3-e9ed2199553f",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Publicationv2",
+								"GetPublication"
+							],
+							"query": [
+								{
+									"key": "publicationId",
+									"value": "b30ea2a2-a455-4588-b1d3-e9ed2199553f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCompaniesWithNotSentMessages",
+					"id": "27354648-effa8878-370c-4151-a941-1b3912caa262",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-token",
+								"value": "b487fe52-2095-469b-90d3-91f324a55a84",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Publicationv2/GetPublication?publicationId=b30ea2a2-a455-4588-b1d3-e9ed2199553f",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Publicationv2",
+								"GetPublication"
+							],
+							"query": [
+								{
+									"key": "publicationId",
+									"value": "b30ea2a2-a455-4588-b1d3-e9ed2199553f"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-48f86173-eec8-4c92-b4d8-57f2d898cfe7"
+		},
+		{
+			"name": "RealTimeTrialNotify",
+			"item": [
+				{
+					"name": "PostEntities",
+					"id": "27354648-91a0cecb-d087-42b7-9e8b-760f381315b1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Settings_RestrictedUse/{{MICOMPANY}}/AppsignIn?appSignInId=c44c4f5a-6e50-429f-908b-5d9e6441abae",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Settings_RestrictedUse",
+								"{{MICOMPANY}}",
+								"AppsignIn"
+							],
+							"query": [
+								{
+									"key": "appSignInId",
+									"value": "c44c4f5a-6e50-429f-908b-5d9e6441abae"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-9c73e244-3289-4d92-810e-5b25673b0955"
+		},
+		{
+			"name": "Replica",
+			"item": [
+				{
+					"name": "DeclararSitio",
+					"id": "27354648-3a306dd4-cecf-4190-9dac-af470d5f49bd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sitioId\" :\"9caeb158-bbcb-49de-afb0-381449457000\",\r\n    \"nombreSitio\" : \"sitio_prueba\",\r\n    \"infoDbsSubida\" : [\r\n        {\r\n            \"Id\" : \"580EEC4B-F10C-4574-A8B8-912D9E912B89\",\r\n            \"Nombre\" : \"PRTEST\",\r\n            \"Descripcion\":\"\",\r\n            \"OrigenDestino\" : \"DEMO\",\r\n            \"ConectadaZNube\" : \"True\",\r\n            \"FechaCambioConexion\" : \"2023-001-01 00:00:00\",\r\n            \"UsuarioCambioConexion\": \"ADMIN\",\r\n            \"Version\" : \"12.0010.13762\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/replica/DeclararSitio",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"replica",
+								"DeclararSitio"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-7f627e70-2541-47b5-98ea-1945418a146f"
+		},
+		{
+			"name": "RPC",
+			"item": [
+				{
+					"name": "GetItemsRPC",
+					"id": "27354648-65100155-8ea9-4b66-aefa-88413240f520",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/RPC/GetItemsRPC?VersionAAO=23.4.3901.28&VersionApp=13.0004.13921",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"RPC",
+								"GetItemsRPC"
+							],
+							"query": [
+								{
+									"key": "VersionAAO",
+									"value": "23.4.3901.28",
+									"type": "text"
+								},
+								{
+									"key": "VersionFixAAO",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "VersionSO",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "VersionApp",
+									"value": "13.0004.13921",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download RPC",
+					"id": "27354648-ebc0360b-36c9-4f75-b797-5b9c63fbe007",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "HEAD",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://s3.amazonaws.com/testZnube/PruebasItemRPC/prueba.cs",
+							"protocol": "https",
+							"host": [
+								"s3",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"testZnube",
+								"PruebasItemRPC",
+								"prueba.cs"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-d134533f-b6b5-4f4e-88c4-6d1794f0689c"
+		},
+		{
+			"name": "ServiceBus",
+			"item": [
+				{
+					"name": "Fetch",
+					"id": "27354648-d50815b1-9d8f-4f59-ad8c-d3124d63e62e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "5668da89-3265-4412-be3f-291349f74d4d",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"AppType\": { \"Name\": \"DRAGONFISH\" },\r\n    \"Credentials\": [\r\n        { \"Key\": \"Serie\", \"Value\": { \"Value\": \"704110\" } },\r\n        { \"Key\": \"Site\", \"Value\": { \"Value\": \"648e63c5-345a-4fe2-b426-767075ee66b6\" } }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44381/IdentitySubscriptions/Fetch",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44381",
+							"path": [
+								"IdentitySubscriptions",
+								"Fetch"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-7b9f9b4a-accd-4954-99a4-2aa341b4ccde"
+		},
+		{
+			"name": "Settings",
+			"item": [
+				{
+					"name": "ServicesConfig",
+					"id": "27354648-70fdee33-a614-4a41-9f11-9c590ee38050",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "e7e06c30-98b5-4ca9-9c5c-558d1cce910d",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "3AA84DCA-06A1-4193-A19D-A19A1022E08F",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Settings/ServicesConfig?serie={{MISERIE}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Settings",
+								"ServicesConfig"
+							],
+							"query": [
+								{
+									"key": "serie",
+									"value": "{{MISERIE}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SkyDriveOk",
+					"id": "27354648-94780b10-cb87-4353-a695-7d617cfed094",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "e7e06c30-98b5-4ca9-9c5c-558d1cce910d",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "3AA84DCA-06A1-4193-A19D-A19A1022E08F",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Settings/ServicesConfig?serie={{MISERIE}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Settings",
+								"ServicesConfig"
+							],
+							"query": [
+								{
+									"key": "serie",
+									"value": "{{MISERIE}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-504db5e2-7913-4b4d-ac05-b1bbec4c4526"
+		},
+		{
+			"name": "Settings_RestrictedUse",
+			"item": [
+				{
+					"name": "RemoveDbLocalFromGroups",
+					"id": "27354648-8997756e-fdaf-42f9-893f-3e4dd497bd98",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Settings_RestrictedUse/{{MICOMPANY}}/RemoveDbLocalFromGroups?dbLocalId=28ae32f9-dbc8-49dc-8f40-8672907c51c0",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Settings_RestrictedUse",
+								"{{MICOMPANY}}",
+								"RemoveDbLocalFromGroups"
+							],
+							"query": [
+								{
+									"key": "dbLocalId",
+									"value": "28ae32f9-dbc8-49dc-8f40-8672907c51c0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SendServicesConflictEmailForReplica",
+					"id": "27354648-079a529a-046d-49e5-8cd4-174ba4a464e1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Settings_RestrictedUse/{{MICOMPANY}}/RemoveDbLocalFromGroups?dbLocalId=28ae32f9-dbc8-49dc-8f40-8672907c51c0",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Settings_RestrictedUse",
+								"{{MICOMPANY}}",
+								"RemoveDbLocalFromGroups"
+							],
+							"query": [
+								{
+									"key": "dbLocalId",
+									"value": "28ae32f9-dbc8-49dc-8f40-8672907c51c0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CompanyApps",
+					"id": "27354648-300d9491-3c0c-4f8c-aa22-62371611ab18",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Settings_RestrictedUse/{{MICOMPANY}}/CompanyApps",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Settings_RestrictedUse",
+								"{{MICOMPANY}}",
+								"CompanyApps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AppsignIn",
+					"id": "27354648-4be2740f-2b8f-4443-aba9-6dfef0a414ac",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"description": "3AA84DCA-06A1-4193-A19D-A19A1022E08F",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Settings_RestrictedUse/{{MICOMPANY}}/AppsignIn?appSignInId=c44c4f5a-6e50-429f-908b-5d9e6441abae",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Settings_RestrictedUse",
+								"{{MICOMPANY}}",
+								"AppsignIn"
+							],
+							"query": [
+								{
+									"key": "appSignInId",
+									"value": "c44c4f5a-6e50-429f-908b-5d9e6441abae"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EnableDisableAppsignInLogMode",
+					"id": "27354648-0a8ed4eb-e895-4d14-89e3-d3d6a9c407d2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Settings_RestrictedUse/{{MICOMPANY}}/EnableDisableAppsignInLogMode?appSignInId=c44c4f5a-6e50-429f-908b-5d9e6441abae&enabled=true",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Settings_RestrictedUse",
+								"{{MICOMPANY}}",
+								"EnableDisableAppsignInLogMode"
+							],
+							"query": [
+								{
+									"key": "appSignInId",
+									"value": "c44c4f5a-6e50-429f-908b-5d9e6441abae"
+								},
+								{
+									"key": "enabled",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-84b0645d-d6e2-488d-8c33-fcdff607c723"
+		},
+		{
+			"name": "Slot",
+			"item": [
+				{
+					"name": "RegisterSlot",
+					"id": "27354648-d569d6b9-8738-4961-b6df-0d3daac8fd93",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Slot/RegisterSlot?slotId=1&serviceId=1&token=1&pc=1&version=1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Slot",
+								"RegisterSlot"
+							],
+							"query": [
+								{
+									"key": "slotId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "serviceId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "pc",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "version",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-528a9a74-3fbe-4d3c-a8a9-c89761f81e59"
+		},
+		{
+			"name": "StockManager",
+			"item": [
+				{
+					"name": "ServicesConfig Copy",
+					"id": "27354648-6b81839d-53e7-4442-bcff-10ca3461e27c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/StockManager/GetStockFromGroup?criteria=art1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"StockManager",
+								"GetStockFromGroup"
+							],
+							"query": [
+								{
+									"key": "criteria",
+									"value": "art1"
+								},
+								{
+									"key": "groupId",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-85e4bc56-7ca7-4069-bb4b-1450f62f4b9e"
+		}
+	]
+}
