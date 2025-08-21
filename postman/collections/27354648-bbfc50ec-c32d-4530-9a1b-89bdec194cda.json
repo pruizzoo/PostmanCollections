@@ -1325,6 +1325,81 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "CompanyApps",
+					"id": "27354648-f978b7ca-a67a-4679-beb5-862479bdf9c8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Settings_RestrictedUse/{{MICOMPANY}}/CompanyApps",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Settings_RestrictedUse",
+								"{{MICOMPANY}}",
+								"CompanyApps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AppsignIn",
+					"id": "27354648-1b6c58b7-93e5-41b7-9282-e223a4bde47a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"description": "3AA84DCA-06A1-4193-A19D-A19A1022E08F",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Settings_RestrictedUse/{{MICOMPANY}}/AppsignIn?appSignInId=c44c4f5a-6e50-429f-908b-5d9e6441abae",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Settings_RestrictedUse",
+								"{{MICOMPANY}}",
+								"AppsignIn"
+							],
+							"query": [
+								{
+									"key": "appSignInId",
+									"value": "c44c4f5a-6e50-429f-908b-5d9e6441abae"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "27354648-ce264a54-2888-4c53-99e7-c031cbd15f2d"
@@ -1440,6 +1515,11 @@
 				}
 			],
 			"id": "27354648-fb15afd6-3234-40be-b1e4-ef08a033a16e"
+		},
+		{
+			"name": "Orchestrator",
+			"item": [],
+			"id": "27354648-926b0429-67c3-4e54-9df3-ce80b74e92ce"
 		}
 	]
 }
