@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "27354648-c30ce533-71e0-4ff6-89b3-bf17fc45b170",
+		"name": "Security",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authenticate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2a30a030-4b15-427a-a5ec-8fc9fbef18d4",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.environment.set(\"TOKEN\", jsonData);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "27354648-dce6cd33-d462-4bd7-9d88-458afcf981ac",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/Security/Authenticate?password=Password&username={{MISERIE}}@znube.com.ar",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"Security",
+						"Authenticate"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "Password"
+						},
+						{
+							"key": "username",
+							"value": "{{MISERIE}}@znube.com.ar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenticate_Worker",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b1ea8338-c03d-4a6c-aa58-158b534b56a9",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.environment.set(\"TOKEN_WORKER\", jsonData);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "27354648-803a1fda-0679-4760-a324-c65e77609cd3",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/Security/Authenticate?username=znube@zoologic.com.ar&password=111111",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"Security",
+						"Authenticate"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "znube@zoologic.com.ar"
+						},
+						{
+							"key": "password",
+							"value": "111111"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
