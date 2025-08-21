@@ -195,8 +195,31 @@
 			"id": "27354648-5d60ab3b-8d47-4161-9b4b-494d9835d33a"
 		},
 		{
-			"name": "New Folder",
-			"item": [],
+			"name": "Docs",
+			"item": [
+				{
+					"name": "Swagger",
+					"id": "27354648-b38c7820-542a-4880-a4ab-701f969dc931",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Docs/Swagger",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Docs",
+								"Swagger"
+							]
+						}
+					},
+					"response": []
+				}
+			],
 			"id": "27354648-192bba5b-40ea-4f57-a346-19cc7bf2c3ab"
 		}
 	]
