@@ -4,5 +4,11 @@
 		"name": "zNubeCollection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
-	"item": []
+	"item": [
+		{
+			"name": "Security",
+			"item": [],
+			"id": "27354648-3a5ac3ae-ebb9-4c0d-a5e7-1d3d9337a958"
+		}
+	]
 }
