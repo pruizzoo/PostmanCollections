@@ -1244,6 +1244,11 @@
 			"id": "27354648-e911e3f4-9490-487f-97d0-0ec4e432fb86"
 		},
 		{
+			"name": "Orchestrator",
+			"item": [],
+			"id": "27354648-926b0429-67c3-4e54-9df3-ce80b74e92ce"
+		},
+		{
 			"name": "Settings_RestrictedUse",
 			"item": [
 				{
@@ -1400,6 +1405,50 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "EnableDisableAppsignInLogMode",
+					"id": "27354648-8fbcb9c8-7821-48a2-bee6-47a06cdf92ff",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Settings_RestrictedUse/{{MICOMPANY}}/EnableDisableAppsignInLogMode?appSignInId=c44c4f5a-6e50-429f-908b-5d9e6441abae&enabled=true",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Settings_RestrictedUse",
+								"{{MICOMPANY}}",
+								"EnableDisableAppsignInLogMode"
+							],
+							"query": [
+								{
+									"key": "appSignInId",
+									"value": "c44c4f5a-6e50-429f-908b-5d9e6441abae"
+								},
+								{
+									"key": "enabled",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "27354648-ce264a54-2888-4c53-99e7-c031cbd15f2d"
@@ -1515,11 +1564,6 @@
 				}
 			],
 			"id": "27354648-fb15afd6-3234-40be-b1e4-ef08a033a16e"
-		},
-		{
-			"name": "Orchestrator",
-			"item": [],
-			"id": "27354648-926b0429-67c3-4e54-9df3-ce80b74e92ce"
 		}
 	]
 }
