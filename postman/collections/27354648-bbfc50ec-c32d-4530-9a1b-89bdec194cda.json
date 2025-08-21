@@ -1710,8 +1710,42 @@
 			"id": "27354648-fb15afd6-3234-40be-b1e4-ef08a033a16e"
 		},
 		{
-			"name": "New Folder",
-			"item": [],
+			"name": "Provisioning",
+			"item": [
+				{
+					"name": "Purge",
+					"id": "27354648-24339f4e-b99d-4318-bc17-6040198f65b1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Provisioning/Purge",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Provisioning",
+								"Purge"
+							]
+						}
+					},
+					"response": []
+				}
+			],
 			"id": "27354648-a7c8035c-33de-4605-aed0-df844d84a11e"
 		}
 	]
