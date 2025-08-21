@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "27354648-bbfc50ec-c32d-4530-9a1b-89bdec194cda",
-		"name": "zNubeCollection",
+		"name": "zNubeRest",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -221,6 +221,57 @@
 				}
 			],
 			"id": "27354648-192bba5b-40ea-4f57-a346-19cc7bf2c3ab"
+		},
+		{
+			"name": "Ecommerce",
+			"item": [
+				{
+					"name": "Publish",
+					"id": "27354648-d76df1bc-55aa-41b6-835f-9d9a2fba89d9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "znube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/ECommerce/{{MICOMPANY}}/6591851/Publish?publishPictures=true&petitionId=0",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"ECommerce",
+								"{{MICOMPANY}}",
+								"6591851",
+								"Publish"
+							],
+							"query": [
+								{
+									"key": "publishPictures",
+									"value": "true"
+								},
+								{
+									"key": "petitionId",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-f7021e3f-2059-48a3-adc5-4c58ad4b5ae6"
 		}
 	]
 }
