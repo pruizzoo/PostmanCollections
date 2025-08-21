@@ -1693,6 +1693,57 @@
 			"id": "27354648-c19e2ee5-915c-44ba-9d34-f1749f47549a"
 		},
 		{
+			"name": "RealTimeTrialNotify",
+			"item": [
+				{
+					"name": "RPC",
+					"item": [],
+					"id": "27354648-605e17db-d56c-4d55-8424-e819baff23ef"
+				},
+				{
+					"name": "PostEntities",
+					"id": "27354648-5ea21932-14c7-4a81-b2fb-15d86b55c466",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Settings_RestrictedUse/{{MICOMPANY}}/AppsignIn?appSignInId=c44c4f5a-6e50-429f-908b-5d9e6441abae",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Settings_RestrictedUse",
+								"{{MICOMPANY}}",
+								"AppsignIn"
+							],
+							"query": [
+								{
+									"key": "appSignInId",
+									"value": "c44c4f5a-6e50-429f-908b-5d9e6441abae"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-86cc0479-10b2-4da1-b466-10ab2c7f9e26"
+		},
+		{
 			"name": "ServiceBus",
 			"item": [
 				{
@@ -2143,7 +2194,7 @@
 		{
 			"name": "New Folder",
 			"item": [],
-			"id": "27354648-86cc0479-10b2-4da1-b466-10ab2c7f9e26"
+			"id": "27354648-f564183a-1d96-4681-ae61-d4241d462fed"
 		}
 	]
 }
