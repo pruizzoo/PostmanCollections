@@ -677,6 +677,18 @@
 				}
 			],
 			"id": "27354648-e3355191-9ef1-44c3-acb1-f9d4288f3d79"
+		},
+		{
+			"name": "Log",
+			"id": "27354648-20447152-ba70-4558-bb43-6c3a7b302d9f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	]
 }
