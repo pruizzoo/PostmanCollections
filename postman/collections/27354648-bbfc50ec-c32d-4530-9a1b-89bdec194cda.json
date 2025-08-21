@@ -932,48 +932,8 @@
 			"id": "27354648-c8dedb7b-5027-40c3-9d94-59986522e89d"
 		},
 		{
-			"name": "StockManager",
+			"name": "Slot",
 			"item": [
-				{
-					"name": "ServicesConfig Copy",
-					"id": "27354648-df1acec0-f04f-437a-b6ec-e180e0d3ffee",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [
-							{
-								"key": "zNube-token",
-								"value": "{{TOKEN}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{URL}}/StockManager/GetStockFromGroup?criteria=art1",
-							"host": [
-								"{{URL}}"
-							],
-							"path": [
-								"StockManager",
-								"GetStockFromGroup"
-							],
-							"query": [
-								{
-									"key": "criteria",
-									"value": "art1"
-								},
-								{
-									"key": "groupId",
-									"value": null,
-									"type": "text",
-									"disabled": true
-								}
-							]
-						}
-					},
-					"response": []
-				},
 				{
 					"name": "RegisterSlot",
 					"id": "27354648-6d7576aa-a210-4922-bca1-4c3ad1f8b9b9",
@@ -1035,12 +995,58 @@
 					"response": []
 				}
 			],
+			"id": "27354648-56e4d370-3efd-43dc-bb54-753f98e71c9b"
+		},
+		{
+			"name": "StockManager",
+			"item": [
+				{
+					"name": "ServicesConfig Copy",
+					"id": "27354648-df1acec0-f04f-437a-b6ec-e180e0d3ffee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/StockManager/GetStockFromGroup?criteria=art1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"StockManager",
+								"GetStockFromGroup"
+							],
+							"query": [
+								{
+									"key": "criteria",
+									"value": "art1"
+								},
+								{
+									"key": "groupId",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
 			"id": "27354648-fb15afd6-3234-40be-b1e4-ef08a033a16e"
 		},
 		{
-			"name": "Slot",
+			"name": "Notify",
 			"item": [],
-			"id": "27354648-56e4d370-3efd-43dc-bb54-753f98e71c9b"
+			"id": "27354648-dfe9fce4-cc7e-4cf4-9831-e5a603ef0d45"
 		}
 	]
 }
