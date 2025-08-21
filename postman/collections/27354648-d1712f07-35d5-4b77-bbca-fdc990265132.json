@@ -2338,6 +2338,18 @@
 				"header": []
 			},
 			"response": []
+		},
+		{
+			"name": "prueba2",
+			"id": "27354648-48aaa1f2-a675-4919-b342-dbbe083f6baf",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	]
 }
