@@ -1696,11 +1696,6 @@
 			"name": "RealTimeTrialNotify",
 			"item": [
 				{
-					"name": "RPC",
-					"item": [],
-					"id": "27354648-605e17db-d56c-4d55-8424-e819baff23ef"
-				},
-				{
 					"name": "PostEntities",
 					"id": "27354648-5ea21932-14c7-4a81-b2fb-15d86b55c466",
 					"protocolProfileBehavior": {
@@ -1742,6 +1737,142 @@
 				}
 			],
 			"id": "27354648-86cc0479-10b2-4da1-b466-10ab2c7f9e26"
+		},
+		{
+			"name": "Replica",
+			"item": [
+				{
+					"name": "DeclararSitio",
+					"id": "27354648-a6914d6c-a230-49b1-bdbe-d73c469199d5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sitioId\" :\"9caeb158-bbcb-49de-afb0-381449457000\",\r\n    \"nombreSitio\" : \"sitio_prueba\",\r\n    \"infoDbsSubida\" : [\r\n        {\r\n            \"Id\" : \"580EEC4B-F10C-4574-A8B8-912D9E912B89\",\r\n            \"Nombre\" : \"PRTEST\",\r\n            \"Descripcion\":\"\",\r\n            \"OrigenDestino\" : \"DEMO\",\r\n            \"ConectadaZNube\" : \"True\",\r\n            \"FechaCambioConexion\" : \"2023-001-01 00:00:00\",\r\n            \"UsuarioCambioConexion\": \"ADMIN\",\r\n            \"Version\" : \"12.0010.13762\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/replica/DeclararSitio",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"replica",
+								"DeclararSitio"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-f564183a-1d96-4681-ae61-d4241d462fed"
+		},
+		{
+			"name": "RPC",
+			"item": [
+				{
+					"name": "GetItemsRPC",
+					"id": "27354648-3e7f10b1-73e9-4463-9ac4-751f907bf7ce",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/RPC/GetItemsRPC?VersionAAO=23.4.3901.28&VersionApp=13.0004.13921",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"RPC",
+								"GetItemsRPC"
+							],
+							"query": [
+								{
+									"key": "VersionAAO",
+									"value": "23.4.3901.28",
+									"type": "text"
+								},
+								{
+									"key": "VersionFixAAO",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "VersionSO",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "VersionApp",
+									"value": "13.0004.13921",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Download RPC",
+					"id": "27354648-6d96a3d1-39a8-498e-81e5-6524d0f16ecd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"user-agent": true
+						}
+					},
+					"request": {
+						"method": "HEAD",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "https://s3.amazonaws.com/testZnube/PruebasItemRPC/prueba.cs",
+							"protocol": "https",
+							"host": [
+								"s3",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"testZnube",
+								"PruebasItemRPC",
+								"prueba.cs"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-605e17db-d56c-4d55-8424-e819baff23ef"
 		},
 		{
 			"name": "ServiceBus",
@@ -2190,11 +2321,6 @@
 				}
 			],
 			"id": "27354648-fb15afd6-3234-40be-b1e4-ef08a033a16e"
-		},
-		{
-			"name": "New Folder",
-			"item": [],
-			"id": "27354648-f564183a-1d96-4681-ae61-d4241d462fed"
 		}
 	]
 }
