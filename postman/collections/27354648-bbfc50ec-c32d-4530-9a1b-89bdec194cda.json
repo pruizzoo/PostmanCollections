@@ -948,20 +948,14 @@
 			"id": "27354648-fb15afd6-3234-40be-b1e4-ef08a033a16e"
 		},
 		{
-			"name": "zNubeStats",
-			"item": [
-				{
-					"name": "Stats/{Serie}",
-					"item": [],
-					"id": "27354648-bc1474b1-2a7b-4ab7-8960-b49c0aa82626"
-				},
-				{
-					"name": "Dynamo",
-					"item": [],
-					"id": "27354648-51430b5f-1adf-49fa-81ba-04027300a8d9"
-				}
-			],
+			"name": "Slot",
+			"item": [],
 			"id": "27354648-56e4d370-3efd-43dc-bb54-753f98e71c9b"
+		},
+		{
+			"name": "Mobile",
+			"item": [],
+			"id": "27354648-c8dedb7b-5027-40c3-9d94-59986522e89d"
 		}
 	]
 }
