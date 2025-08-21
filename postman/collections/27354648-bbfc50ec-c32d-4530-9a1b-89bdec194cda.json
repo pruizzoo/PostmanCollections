@@ -902,6 +902,36 @@
 			"id": "27354648-d026e886-5183-40ab-8b85-c17dbfabdb77"
 		},
 		{
+			"name": "Mobile",
+			"item": [
+				{
+					"name": "CreateSerial",
+					"id": "27354648-e98020a7-5e66-4354-b293-22d04d552fb1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "ValidateApplication_ConsultaDeStockYPrecios",
+					"id": "27354648-1519eb1d-0231-4ec2-83b9-d73b68596575",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-c8dedb7b-5027-40c3-9d94-59986522e89d"
+		},
+		{
 			"name": "StockManager",
 			"item": [
 				{
@@ -943,6 +973,66 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "RegisterSlot",
+					"id": "27354648-6d7576aa-a210-4922-bca1-4c3ad1f8b9b9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Slot/RegisterSlot?slotId=1&serviceId=1&token=1&pc=1&version=1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Slot",
+								"RegisterSlot"
+							],
+							"query": [
+								{
+									"key": "slotId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "serviceId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "pc",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "version",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "27354648-fb15afd6-3234-40be-b1e4-ef08a033a16e"
@@ -951,11 +1041,6 @@
 			"name": "Slot",
 			"item": [],
 			"id": "27354648-56e4d370-3efd-43dc-bb54-753f98e71c9b"
-		},
-		{
-			"name": "Mobile",
-			"item": [],
-			"id": "27354648-c8dedb7b-5027-40c3-9d94-59986522e89d"
 		}
 	]
 }
