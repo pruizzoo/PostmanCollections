@@ -840,6 +840,68 @@
 			"id": "27354648-e434c969-f1bc-4c7f-8800-b2bb66f6186b"
 		},
 		{
+			"name": "Mandato",
+			"item": [
+				{
+					"name": "Obtener",
+					"id": "27354648-6421b7dd-b365-450d-a436-7518460962db",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-token",
+								"value": "27bb7a94-aaa5-46b9-9541-df16b539eea6",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Mandato/Obtener?sitioId={{MISITIO}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Mandato",
+								"Obtener"
+							],
+							"query": [
+								{
+									"key": "sitioId",
+									"value": "{{MISITIO}}"
+								},
+								{
+									"key": "tipoDeMandato",
+									"value": "Basico",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "versionAAO",
+									"value": "23.4.3901.28",
+									"disabled": true
+								},
+								{
+									"key": "versionApp",
+									"value": "13.0004.13921",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-d026e886-5183-40ab-8b85-c17dbfabdb77"
+		},
+		{
 			"name": "StockManager",
 			"item": [
 				{
@@ -886,8 +948,19 @@
 			"id": "27354648-fb15afd6-3234-40be-b1e4-ef08a033a16e"
 		},
 		{
-			"name": "New Folder",
-			"item": [],
+			"name": "zNubeStats",
+			"item": [
+				{
+					"name": "Stats/{Serie}",
+					"item": [],
+					"id": "27354648-bc1474b1-2a7b-4ab7-8960-b49c0aa82626"
+				},
+				{
+					"name": "Dynamo",
+					"item": [],
+					"id": "27354648-51430b5f-1adf-49fa-81ba-04027300a8d9"
+				}
+			],
 			"id": "27354648-56e4d370-3efd-43dc-bb54-753f98e71c9b"
 		}
 	]
