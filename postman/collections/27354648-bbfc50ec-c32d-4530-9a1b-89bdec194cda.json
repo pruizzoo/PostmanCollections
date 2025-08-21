@@ -153,6 +153,46 @@
 				}
 			],
 			"id": "27354648-35e18981-0181-4580-a2cf-f414c3577458"
+		},
+		{
+			"name": "ADN",
+			"item": [
+				{
+					"name": "GetAdnByTableName",
+					"id": "27354648-19f060cf-5d1a-4363-b1fd-62842e597b94",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Publication/{{MICOMPANY}}/PublishNotSentMessages",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Publication",
+								"{{MICOMPANY}}",
+								"PublishNotSentMessages"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-5d60ab3b-8d47-4161-9b4b-494d9835d33a"
 		}
 	]
 }
