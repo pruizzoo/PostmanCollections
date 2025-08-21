@@ -783,6 +783,63 @@
 			"id": "27354648-04d7b5c3-46f0-4cc2-9d49-021f300534bc"
 		},
 		{
+			"name": "LogSinSeguridad",
+			"item": [
+				{
+					"name": "LogResultadoTarea",
+					"id": "27354648-bf27c736-a29f-4d30-98a5-45798ade13b5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}"
+							},
+							{
+								"key": "zNube-token",
+								"value": "27bb7a94-aaa5-46b9-9541-df16b539eea6",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Log/LogAccion?LogId=6BE9D0E4-AFF7-4955-8EC5-B055D58C7A80&Result=Prueba&LogType=Error",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Log",
+								"LogAccion"
+							],
+							"query": [
+								{
+									"key": "LogId",
+									"value": "6BE9D0E4-AFF7-4955-8EC5-B055D58C7A80"
+								},
+								{
+									"key": "Date",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "Result",
+									"value": "Prueba"
+								},
+								{
+									"key": "LogType",
+									"value": "Error"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-e434c969-f1bc-4c7f-8800-b2bb66f6186b"
+		},
+		{
 			"name": "StockManager",
 			"item": [
 				{
@@ -829,9 +886,9 @@
 			"id": "27354648-fb15afd6-3234-40be-b1e4-ef08a033a16e"
 		},
 		{
-			"name": "ogSinSeguridad",
+			"name": "New Folder",
 			"item": [],
-			"id": "27354648-e434c969-f1bc-4c7f-8800-b2bb66f6186b"
+			"id": "27354648-56e4d370-3efd-43dc-bb54-753f98e71c9b"
 		}
 	]
 }
