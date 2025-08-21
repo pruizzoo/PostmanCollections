@@ -101,6 +101,58 @@
 				}
 			],
 			"id": "27354648-3a5ac3ae-ebb9-4c0d-a5e7-1d3d9337a958"
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "RemoteLogon",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2a30a030-4b15-427a-a5ec-8fc9fbef18d4",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"pm.environment.set(\"TOKEN\", jsonData);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "27354648-15303a21-6fa7-48fa-954e-82d8e36cf65e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Security/Authenticate?password=Password&username={{MISERIE}}@znube.com.ar",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Security",
+								"Authenticate"
+							],
+							"query": [
+								{
+									"key": "password",
+									"value": "Password"
+								},
+								{
+									"key": "username",
+									"value": "{{MISERIE}}@znube.com.ar"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-35e18981-0181-4580-a2cf-f414c3577458"
 		}
 	]
 }
