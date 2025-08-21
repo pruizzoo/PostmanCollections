@@ -932,6 +932,136 @@
 			"id": "27354648-c8dedb7b-5027-40c3-9d94-59986522e89d"
 		},
 		{
+			"name": "Notify",
+			"item": [
+				{
+					"name": "PostEntities",
+					"id": "27354648-603e52fb-03c4-4f22-bb6e-c36869572e7e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "4334b00c-c17c-4938-8b5a-0f3face419f8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Name\": \"TIENEMINUSCULASS\",\r\n\t\"DbLocalId\": \"02b35a0e-1a06-4eda-9688-a1f9468f444d\",\r\n\t\"SiteId\": \"2746c08f-65b9-4f09-a36a-090fd5460af8\",\r\n\t\"Version\": \"2f13b9d8-37c2-4029-9846-058a657da4f7\",\r\n\t\"Entities\": [\r\n\t\t{\r\n\t\t\t\"Name\": \"TIENEMINUSCULASS\",\r\n\t\t\t\"OrganicId\": \"39527c24-e41f-4194-8f75-343f0eaa3b7f\",\r\n\t\t\t\"Data\": \"4aea00aa-1c10-4ceb-a071-88a46e6afed5\",\r\n\t\t\t\"DbLocalId\": \"02b35a0e-1a06-4eda-9688-a1f9468f444d\",\r\n\t\t\t\"SiteId\": \"2746c08f-65b9-4f09-a36a-090fd5460af8\",\r\n\t\t\t\"Deleted\": false,\r\n\t\t\t\"Version\": \"2f13b9d8-37c2-4029-9846-058a657da4f7\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Name\": \"TIENEMINUSCULASS\",\r\n\t\t\t\"OrganicId\": \"4bb0fa50-b3b0-4f46-8cf5-1424085619a7\",\r\n\t\t\t\"Data\": \"c8fef2ba-280e-4f47-95f5-7f986d8ae4b7\",\r\n\t\t\t\"DbLocalId\": \"02b35a0e-1a06-4eda-9688-a1f9468f444d\",\r\n\t\t\t\"SiteId\": \"2746c08f-65b9-4f09-a36a-090fd5460af8\",\r\n\t\t\t\"Deleted\": true,\r\n\t\t\t\"Version\": \"2f13b9d8-37c2-4029-9846-058a657da4f7\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Name\": \"TIENEMINUSCULASS\",\r\n\t\t\t\"OrganicId\": \"59d215f2-eea6-4c1e-8de5-3360dcdfa80e\",\r\n\t\t\t\"Data\": \"12592f85-feb6-45fb-bc0e-131b05e9dddd\",\r\n\t\t\t\"DbLocalId\": \"02b35a0e-1a06-4eda-9688-a1f9468f444d\",\r\n\t\t\t\"SiteId\": \"2746c08f-65b9-4f09-a36a-090fd5460af8\",\r\n\t\t\t\"Deleted\": false,\r\n\t\t\t\"Version\": \"2f13b9d8-37c2-4029-9846-058a657da4f7\"\r\n\t\t}\r\n\t],\r\n\t\"PublicationIds\": [\r\n\t\t\"f0810d9a-1245-4386-8db2-2e9a910e5dc1\",\r\n\t\t\"7d084df8-a019-41f6-8fa2-29c6a8051750\"\r\n\t],\r\n\t\"RestOriginType\": 2,\r\n\t\"RequestGroup\": null,\r\n\t\"Serie\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Notify/PostEntities?Name=&DbLocalId=100&SiteId&Version&Serie",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Notify",
+								"PostEntities"
+							],
+							"query": [
+								{
+									"key": "Name",
+									"value": ""
+								},
+								{
+									"key": "DbLocalId",
+									"value": "100"
+								},
+								{
+									"key": "SiteId",
+									"value": null,
+									"type": "text"
+								},
+								{
+									"key": "Version",
+									"value": null,
+									"type": "text"
+								},
+								{
+									"key": "Serie",
+									"value": null,
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostEntities Copy",
+					"id": "27354648-0172d027-2be3-42c5-95e8-7ee2665488ee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "4334b00c-c17c-4938-8b5a-0f3face419f8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"Name\": \"TIENEMINUSCULASS\",\r\n\t\"DbLocalId\": \"02b35a0e-1a06-4eda-9688-a1f9468f444d\",\r\n\t\"SiteId\": \"2746c08f-65b9-4f09-a36a-090fd5460af8\",\r\n\t\"Version\": \"2f13b9d8-37c2-4029-9846-058a657da4f7\",\r\n\t\"Entities\": [\r\n\t\t{\r\n\t\t\t\"Name\": \"TIENEMINUSCULASS\",\r\n\t\t\t\"OrganicId\": \"39527c24-e41f-4194-8f75-343f0eaa3b7f\",\r\n\t\t\t\"Data\": \"4aea00aa-1c10-4ceb-a071-88a46e6afed5\",\r\n\t\t\t\"DbLocalId\": \"02b35a0e-1a06-4eda-9688-a1f9468f444d\",\r\n\t\t\t\"SiteId\": \"2746c08f-65b9-4f09-a36a-090fd5460af8\",\r\n\t\t\t\"Deleted\": false,\r\n\t\t\t\"Version\": \"2f13b9d8-37c2-4029-9846-058a657da4f7\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Name\": \"TIENEMINUSCULASS\",\r\n\t\t\t\"OrganicId\": \"4bb0fa50-b3b0-4f46-8cf5-1424085619a7\",\r\n\t\t\t\"Data\": \"c8fef2ba-280e-4f47-95f5-7f986d8ae4b7\",\r\n\t\t\t\"DbLocalId\": \"02b35a0e-1a06-4eda-9688-a1f9468f444d\",\r\n\t\t\t\"SiteId\": \"2746c08f-65b9-4f09-a36a-090fd5460af8\",\r\n\t\t\t\"Deleted\": true,\r\n\t\t\t\"Version\": \"2f13b9d8-37c2-4029-9846-058a657da4f7\"\r\n\t\t},\r\n\t\t{\r\n\t\t\t\"Name\": \"TIENEMINUSCULASS\",\r\n\t\t\t\"OrganicId\": \"59d215f2-eea6-4c1e-8de5-3360dcdfa80e\",\r\n\t\t\t\"Data\": \"12592f85-feb6-45fb-bc0e-131b05e9dddd\",\r\n\t\t\t\"DbLocalId\": \"02b35a0e-1a06-4eda-9688-a1f9468f444d\",\r\n\t\t\t\"SiteId\": \"2746c08f-65b9-4f09-a36a-090fd5460af8\",\r\n\t\t\t\"Deleted\": false,\r\n\t\t\t\"Version\": \"2f13b9d8-37c2-4029-9846-058a657da4f7\"\r\n\t\t}\r\n\t],\r\n\t\"PublicationIds\": [\r\n\t\t\"f0810d9a-1245-4386-8db2-2e9a910e5dc1\",\r\n\t\t\"7d084df8-a019-41f6-8fa2-29c6a8051750\"\r\n\t],\r\n\t\"RestOriginType\": 2,\r\n\t\"RequestGroup\": null,\r\n\t\"Serie\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Notify/PostEntities?Name=&DbLocalId=100&SiteId&Version&Serie",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Notify",
+								"PostEntities"
+							],
+							"query": [
+								{
+									"key": "Name",
+									"value": ""
+								},
+								{
+									"key": "DbLocalId",
+									"value": "100"
+								},
+								{
+									"key": "SiteId",
+									"value": null,
+									"type": "text"
+								},
+								{
+									"key": "Version",
+									"value": null,
+									"type": "text"
+								},
+								{
+									"key": "Serie",
+									"value": null,
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "27354648-dfe9fce4-cc7e-4cf4-9831-e5a603ef0d45"
+		},
+		{
 			"name": "Slot",
 			"item": [
 				{
@@ -1042,11 +1172,6 @@
 				}
 			],
 			"id": "27354648-fb15afd6-3234-40be-b1e4-ef08a033a16e"
-		},
-		{
-			"name": "Notify",
-			"item": [],
-			"id": "27354648-dfe9fce4-cc7e-4cf4-9831-e5a603ef0d45"
 		}
 	]
 }
