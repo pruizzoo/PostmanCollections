@@ -1507,7 +1507,88 @@
 		},
 		{
 			"name": "Settings",
-			"item": [],
+			"item": [
+				{
+					"name": "ServicesConfig",
+					"id": "27354648-ff8c29bd-563b-44eb-80aa-755a35d9d002",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "e7e06c30-98b5-4ca9-9c5c-558d1cce910d",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "3AA84DCA-06A1-4193-A19D-A19A1022E08F",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Settings/ServicesConfig?serie={{MISERIE}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Settings",
+								"ServicesConfig"
+							],
+							"query": [
+								{
+									"key": "serie",
+									"value": "{{MISERIE}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SkyDriveOk",
+					"id": "27354648-27bd5d06-9e0c-4704-9934-c6089651d898",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "e7e06c30-98b5-4ca9-9c5c-558d1cce910d",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "3AA84DCA-06A1-4193-A19D-A19A1022E08F",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Settings/ServicesConfig?serie={{MISERIE}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Settings",
+								"ServicesConfig"
+							],
+							"query": [
+								{
+									"key": "serie",
+									"value": "{{MISERIE}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
 			"id": "27354648-96cbbef9-8571-481c-9af5-ea210615ee9b"
 		},
 		{
@@ -1826,6 +1907,11 @@
 				}
 			],
 			"id": "27354648-fb15afd6-3234-40be-b1e4-ef08a033a16e"
+		},
+		{
+			"name": "New Folder",
+			"item": [],
+			"id": "27354648-c19e2ee5-915c-44ba-9d34-f1749f47549a"
 		}
 	]
 }
