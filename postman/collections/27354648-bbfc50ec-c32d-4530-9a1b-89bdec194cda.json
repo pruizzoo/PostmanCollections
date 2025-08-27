@@ -1489,14 +1489,14 @@
 							}
 						],
 						"url": {
-							"raw": "{{URL}}/Provisioning_RestrictedUse/{{WORKER_COMPANYID}}/ProcessPendingDbConnections",
+							"raw": "{{URL}}/Provisioning_RestrictedUse/{{WORKER_COMPANYID}}/PurgeDbConnections",
 							"host": [
 								"{{URL}}"
 							],
 							"path": [
 								"Provisioning_RestrictedUse",
 								"{{WORKER_COMPANYID}}",
-								"ProcessPendingDbConnections"
+								"PurgeDbConnections"
 							]
 						}
 					},
