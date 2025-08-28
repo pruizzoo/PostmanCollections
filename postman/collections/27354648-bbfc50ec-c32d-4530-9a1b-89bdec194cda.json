@@ -1535,6 +1535,40 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "PurgeDbConnections Copy",
+					"id": "27354648-8ecdd299-b265-4598-9fa4-0d6c0dc1366e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Provisioning_RestrictedUse/{{WORKER_COMPANYID}}/PurgeDbConnections",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Provisioning_RestrictedUse",
+								"{{WORKER_COMPANYID}}",
+								"PurgeDbConnections"
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "27354648-b1b66b20-77dc-4a7e-82fd-2f0a1a01a5e8"
