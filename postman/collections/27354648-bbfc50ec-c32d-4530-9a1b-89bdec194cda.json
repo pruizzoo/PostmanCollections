@@ -1469,6 +1469,40 @@
 					"response": []
 				},
 				{
+					"name": "ProcessPendingDbConnections Copy",
+					"id": "27354648-894bf43c-79f6-49e5-a893-55423ccee6a4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/Provisioning_RestrictedUse/{{WORKER_COMPANYID}}/ProcessPendingDbConnections",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Provisioning_RestrictedUse",
+								"{{WORKER_COMPANYID}}",
+								"ProcessPendingDbConnections"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "PurgeDbConnections",
 					"id": "27354648-53024064-b6cf-4cd6-b807-17dd6c9e62e8",
 					"protocolProfileBehavior": {
