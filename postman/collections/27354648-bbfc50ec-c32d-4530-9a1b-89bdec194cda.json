@@ -997,7 +997,7 @@
 					"response": []
 				},
 				{
-					"name": "PostEntities Copy",
+					"name": "Post",
 					"id": "27354648-0172d027-2be3-42c5-95e8-7ee2665488ee",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
