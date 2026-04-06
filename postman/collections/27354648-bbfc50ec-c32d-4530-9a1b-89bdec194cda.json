@@ -401,6 +401,56 @@
 					"response": []
 				},
 				{
+					"name": "PaymentMethods",
+					"id": "27354648-0bca735e-b61f-4d71-a93c-60a8ea03f23a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "zNube-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/ECommerceIntegration/GetOrders?storeId=280852910&eCommerceType=1&limit=10&offset=4&fromOrderId=850050",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"ECommerceIntegration",
+								"GetOrders"
+							],
+							"query": [
+								{
+									"key": "storeId",
+									"value": "280852910"
+								},
+								{
+									"key": "eCommerceType",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "offset",
+									"value": "4"
+								},
+								{
+									"key": "fromOrderId",
+									"value": "850050"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "GetOrdersHistory",
 					"id": "27354648-508ce7aa-fa72-4a0e-8a07-a59e0e0854c0",
 					"protocolProfileBehavior": {
