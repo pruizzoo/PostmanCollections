@@ -545,6 +545,18 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Claimshistory",
+					"id": "27354648-e4c12334-c17d-4f15-b6a7-7b2dfd57c022",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			],
 			"id": "27354648-a581788a-f339-4a02-a49c-66fe08dae030"
