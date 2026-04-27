@@ -1826,7 +1826,7 @@
 			"name": "Publication_RestrictedUse",
 			"item": [
 				{
-					"name": "GetCentralizationInfoByDBId",
+					"name": "DeletePublication",
 					"id": "27354648-d766b06e-1325-41db-bdca-7da5b0e2e393",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
