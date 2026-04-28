@@ -271,6 +271,51 @@
 					"response": []
 				},
 				{
+					"name": "Publish Copy",
+					"id": "27354648-320867ce-0440-4b25-bca3-9ca0ef6a4859",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "znube-token",
+								"value": "{{TOKEN_WORKER}}",
+								"type": "text"
+							},
+							{
+								"key": "zNube-accessKey",
+								"value": "{{ZNUBE_ACCESSKEY}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}/ECommerce/{{MICOMPANY}}/6591851/Publish?publishPictures=true&petitionId=0",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"ECommerce",
+								"{{MICOMPANY}}",
+								"6591851",
+								"Publish"
+							],
+							"query": [
+								{
+									"key": "publishPictures",
+									"value": "true"
+								},
+								{
+									"key": "petitionId",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "HookEventBase",
 					"id": "27354648-889f870d-1831-475e-aacc-58870323e073",
 					"protocolProfileBehavior": {
